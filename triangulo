@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+typedef struct{
+    int x;
+    int y;
+    int z;
+}triangulo;
+int main()
+{
+    triangulo a;
+    int area1;
+    printf("Lados do triangulo A: ");
+    scanf("%d %d %d",&a.x, &a.y, &a.z);
+    if(a.x == a.y && a.y == a.z && a.z == a.x)
+    {
+        area1=area(a.x);
+        printf("Area: %d ",area1);
+    }
+    return 0;
+}
+int area(int x)
+{
+    int area;
+    area = (x*sqrt(3))/4;
+    return area;
+}

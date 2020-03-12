@@ -1,0 +1,54 @@
+int main(){
+    matriz m;
+    matriz n;
+    matriz l;
+    int i,j;
+    printf("Informe linhas e colunas: ");
+    scanf("%d %d", &m.lin, &m.col);
+    for(i=0;i<m.col;i++)
+    {
+        for(j=0;j<m.lin;j++)
+        {
+            m.mat[i][j]=rand()%5;
+            printf("%d ",m.mat[i][j]);
+            if(j==(m.lin-1))
+                printf("\n");
+        }
+    }
+    printf("\n");
+    for(i=0;i<m.col;i++)
+    {
+        for(j=0;j<m.lin;j++)
+        {
+            n.mat[i][j]=rand()%5;
+            printf("%d ",n.mat[i][j]);
+            if(j==(m.lin-1))
+            printf("\n");
+        }
+    }
+    printf("\n\n");
+    for(i=0;i<m.col;i++)
+    {
+        for(j=0;j<m.lin;j++)
+        {
+            l.mat[i][j]=n.mat[i][j] + m.mat[i][j];
+            printf("%d ",l.mat[i][j]);
+            if(j==(m.lin-1))
+            printf("\n");
+        }
+    }
+    printf("\n\n");
+    printf("Transposta da matriz segunda\n");
+    for(i=0;i<m.col;i++)
+    {
+        for(j=0;j<m.lin;j++)
+        {
+            n.mat[j][i]=m.mat[i][j];
+            printf("%d ",n.mat[i][j]);
+
+            if(j==(m.lin-1))
+            printf("\n");
+        }
+    }
+    return 0;
+}

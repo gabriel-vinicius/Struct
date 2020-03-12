@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+typedef struct{
+    char descricao[100];
+    int ataque;
+    int defesa;
+}braco;
+typedef struct{
+    char descricao[100];
+    int ataque;
+    int defesa;
+}perna;
+typedef struct{
+    char descricao[100];
+    int ataque;
+    int defesa;
+}cabeca;
+typedef struct{
+    char descricao[100];
+    int ataque;
+    int defesa;
+    braco dir1;
+    braco esq1;
+    perna esq;
+    perna dir;
+}exodia;
+int main()
+{
+    braco Bdir;
+    braco Besq;
+    perna Pesq;
+    perna Pdir;
+    cabeca cabeca;
+    exodia exodia;
+    printf("Informe os ataques bracos, as pernas do exodia: ");
+    scanf("%d %d %d %d %d %d", &Bdir.ataque, &Besq.ataque, &Pesq.ataque, &Pdir.ataque);
+    printf("Informe as defesas bracos, as pernas do exodia: ");
+    scanf("%d %d %d %d %d %d", &Bdir.defesa, &Besq.defesa, &Pesq.defesa, &Pdir.defesa);
+    if((Bdir.defesa==Besq.defesa) && (Pesq.defesa == Pdir.defesa) && (Bdir.ataque == Besq.ataque) && (Pesq.ataque == Pdir.ataque))
+    {
+        printf("Uniao dos membros bem sucedida");
+    }
+    else
+    {
+        printf("Não sucedido");
+    }
+
+    return 0;
+}

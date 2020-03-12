@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+typedef struct{
+    int x;
+    int y;
+    int z;
+}triangulo;
+triangulo soma(triangulo a, triangulo b);
+int main() {
+    triangulo a;
+    triangulo b;
+    triangulo c;
+    int p,area;
+    printf("Lados do triangulo A: ");
+    scanf("%d %d %d",&a.x, &a.y, &a.z);
+    printf("Lados %d %d %d\n",a.x,a.y,a.z);
+    p = (a.x+a.y+a.z)/2;
+    area = sqrtf(p*(p-a.x)*(p-a.y)*(p-a.z));
+    printf("Area: %d\n",area);
+    printf("Lados do triangulo B: ");
+    scanf("%d %d %d",&b.x, &b.y, &b.z);
+    c = soma(a,b);
+    printf("Lados %d %d %d\n",c.x,c.y,c.z);
+    return 0;
+}
+triangulo soma(triangulo a, triangulo b){
+        triangulo c;
+        c.x = a.x + b.x;
+        c.y = a.y + b.y;
+        c.z = a.z + b.z;
+
+        return c;
+}
